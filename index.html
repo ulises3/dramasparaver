@@ -3,47 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dramas Para Ver</title>
+    <title>Dramas Para Ver - Inicio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
+        body { font-family: Arial, sans-serif; background-color: #121212; color: #ffffff; margin: 0; padding: 0; }
+        nav { background-color: #1f1f1f; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #ff5722; }
+        nav a { color: #ffffff; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a:hover { color: #ff5722; }
+        .logo { font-size: 20px; color: #ff5722; font-weight: bold; }
+        
+        .main-container { max-width: 1100px; margin: 20px auto; padding: 20px; }
+        
+        /* Secciones y Bloques */
+        .section-block { margin-bottom: 40px; }
+        .section-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+        .section-header h2 { color: #ff5722; margin: 0; font-size: 22px; }
+        
+        .btn-ver-mas { background: #ff5722; color: #fff; padding: 8px 15px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: bold; }
+        .btn-ver-mas:hover { background: #e64a19; }
+
+        /* Grillas (Grid) */
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        
+        .card { background: #1a1a1a; border-radius: 8px; overflow: hidden; border: 1px solid #2a2a2a; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .card img { width: 100%; height: 160px; object-fit: cover; background-color: #333; }
+        .card-content { padding: 15px; }
+        .card-content h3 { font-size: 16px; margin: 0 0 10px 0; color: #fff; }
+        .card-content p { font-size: 13px; color: #aaa; margin: 0 0 15px 0; }
+        .card-link { color: #ff5722; text-decoration: none; font-size: 14px; font-weight: bold; }
+
+        @media (max-width: 768px) {
+            .grid-3 { grid-template-columns: 1fr; }
         }
-        h1 {
-            color: #ff5722;
-        }
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            aspect-ratio: 16 / 9;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 8px;
-        }
+        footer { text-align: center; padding: 20px; color: #777; font-size: 14px; border-top: 1px solid #222; margin-top: 40px; }
     </style>
 </head>
 <body>
 
-    <h1>Dramas Para Ver</h1>
-    <p>Disfruta de tu contenido favorito.</p>
+    <!-- MENÚ SUPERIOR -->
+    <nav>
+        <div class="logo">DramasParaVer</div>
+        <div>
+            <a href="index.html" style="color: #ff5722;">Inicio</a>
+            <a href="dramas.html">Todos los dramas</a>
+            <a href="articulos.html">Artículos</a>
+            <a href="privacidad.html">Política de privacidad</a>
+        </div>
+    </nav>
 
-    <!-- REPRODUCTOR DE VIDEO -->
-    <div class="video-container">
-       <iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/SkZETJAJ#4JMH_aICQ3_yO7wr0WuChcDQ4QcjXaR_3A8GzorPpFg" allowfullscreen ></iframe>
+    <div class="main-container">
+
+        <!-- BLOQUE 1: ÚLTIMAS ENTRADAS (6 posts) -->
+        <div class="section-block">
+            <div class="section-header">
+                <h2>Últimas Entradas</h2>
+                <a href="dramas.html" class="btn-ver-mas">Ver más</a>
+            </div>
+            <div class="grid-3">
+                <div class="card"><div class="card-content"><h3>Próximamente</h3><p>Espacio para tu nuevo post...</p><a href="#" class="card-link">Ver capítulo &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Próximamente</h3><p>Espacio para tu nuevo post...</p><a href="#" class="card-link">Ver capítulo &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Próximamente</h3><p>Espacio para tu nuevo post...</p><a href="#" class="card-link">Ver capítulo &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Próximamente</h3><p>Espacio para tu nuevo post...</p><a href="#" class="card-link">Ver capítulo &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Próximamente</h3><p>Espacio para tu nuevo post...</p><a href="#" class="card-link">Ver capítulo &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Próximamente</h3><p>Espacio para tu nuevo post...</p><a href="#" class="card-link">Ver capítulo &rarr;</a></div></div>
+            </div>
+        </div>
+
+        <!-- BLOQUE 2: TODOS LOS DRAMAS (6 posts) -->
+        <div class="section-block">
+            <div class="section-header">
+                <h2>Todos los Dramas</h2>
+                <a href="dramas.html" class="btn-ver-mas">Ver más</a>
+            </div>
+            <div class="grid-3">
+                <div class="card"><div class="card-content"><h3>Catálogo 1</h3><p>Página pilar del drama...</p><a href="#" class="card-link">Ver lista &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Catálogo 2</h3><p>Página pilar del drama...</p><a href="#" class="card-link">Ver lista &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Catálogo 3</h3><p>Página pilar del drama...</p><a href="#" class="card-link">Ver lista &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Catálogo 4</h3><p>Página pilar del drama...</p><a href="#" class="card-link">Ver lista &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Catálogo 5</h3><p>Página pilar del drama...</p><a href="#" class="card-link">Ver lista &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Catálogo 6</h3><p>Página pilar del drama...</p><a href="#" class="card-link">Ver lista &rarr;</a></div></div>
+            </div>
+        </div>
+
+        <!-- BLOQUE 3: DRAMAS DESTACADOS (4 posts) -->
+        <div class="section-block">
+            <div class="section-header">
+                <h2>Dramas Destacados</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card"><div class="card-content"><h3>Destacado 1</h3><p>Serie recomendada...</p><a href="#" class="card-link">Ver serie &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Destacado 2</h3><p>Serie recomendada...</p><a href="#" class="card-link">Ver serie &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Destacado 3</h3><p>Serie recomendada...</p><a href="#" class="card-link">Ver serie &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Destacado 4</h3><p>Serie recomendada...</p><a href="#" class="card-link">Ver serie &rarr;</a></div></div>
+            </div>
+        </div>
+
+        <!-- BLOQUE 4: ARTÍCULOS (3 posts) -->
+        <div class="section-block">
+            <div class="section-header">
+                <h2>Artículos y Noticias</h2>
+                <a href="articulos.html" class="btn-ver-mas">Ver más</a>
+            </div>
+            <div class="grid-3">
+                <div class="card"><div class="card-content"><h3>Artículo 1</h3><p>Noticia o novedad...</p><a href="#" class="card-link">Leer artículo &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Artículo 2</h3><p>Noticia o novedad...</p><a href="#" class="card-link">Leer artículo &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Artículo 3</h3><p>Noticia o novedad...</p><a href="#" class="card-link">Leer artículo &rarr;</a></div></div>
+            </div>
+        </div>
 
     </div>
+
+    <footer>
+        <p>&copy; 2026 DramasParaVer. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
