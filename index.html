@@ -42,14 +42,16 @@
 
     <!-- MENÚ SUPERIOR -->
     <!-- MENÚ SUPERIOR ADAPTABLE -->
+<!-- MENÚ SUPERIOR ADAPTABLE -->
 <nav>
     <div class="nav-container">
-        <div class="logo">DramasParaVer</div>
-        
         <!-- Botón Hamburguesa -->
         <div class="menu-toggle" onclick="toggleMenu()">
             &#9776;
         </div>
+
+        <!-- Logo al Centro -->
+        <div class="logo">DramasParaVer</div>
 
         <!-- Enlaces del menú -->
         <div class="nav-links" id="navLinks">
@@ -62,22 +64,41 @@
 </nav>
 
 <style>
-    /* Estilos generales del Nav */
+    /* Estilos generales para PC */
     nav { background-color: #1f1f1f; border-bottom: 2px solid #ff5722; padding: 0 20px; }
     .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 60px; }
+    
     .logo { font-size: 20px; color: #ff5722; font-weight: bold; }
+    
     .nav-links { display: flex; align-items: center; }
     .nav-links a { color: #ffffff; text-decoration: none; margin-left: 20px; font-weight: bold; font-size: 15px; }
     .nav-links a:hover { color: #ff5722; }
     
-    /* Botón hamburguesa oculto por defecto en PC */
-    .menu-toggle { display: none; font-size: 26px; color: #ffffff; cursor: pointer; }
+    .menu-toggle { display: none; font-size: 24px; color: #ffffff; cursor: pointer; }
 
-    /* Adaptación para móviles (pantallas menores a 768px) */
+    /* Adaptación exacta para Celular */
     @media (max-width: 768px) {
-        .menu-toggle { display: block; }
+        nav { padding: 0 15px; }
+        .nav-container { 
+            display: grid; 
+            grid-template-columns: 40px 1fr 40px; /* Divide la barra en 3 partes: Izquierda, Centro, Derecha */
+            align-items: center;
+            position: relative;
+        }
+        
+        /* Oculta el menú horizontal en PC */
+        .menu-toggle { display: block; grid-column: 1; text-align: left; }
+        
+        /* Centra el título de forma perfecta usando la columna del medio */
+        .logo { 
+            grid-column: 2; 
+            text-align: center; 
+            font-size: 18px;
+        }
+        
+        /* Menú desplegable vertical */
         .nav-links {
-            display: none; /* Oculto por defecto en móvil */
+            display: none;
             flex-direction: column;
             width: 100%;
             background-color: #1f1f1f;
@@ -87,22 +108,20 @@
             padding: 15px 0;
             border-bottom: 2px solid #ff5722;
             text-align: center;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+            z-index: 100;
         }
         .nav-links.active {
-            display: flex; /* Se muestra al hacer clic */
+            display: flex;
         }
         .nav-links a {
             margin: 10px 0;
             font-size: 16px;
         }
-        .nav-container {
-            position: relative;
-        }
     }
 </style>
 
 <script>
-    /* Script para abrir y cerrar el menú hamburguesa en móvil */
     function toggleMenu() {
         var links = document.getElementById("navLinks");
         links.classList.toggle("active");
