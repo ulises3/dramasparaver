@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos los Dramas - Dramas Para Ver</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #121212; color: #ffffff; margin: 0; padding: 0; }
+        nav { background-color: #1f1f1f; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #ff5722; }
+        nav a { color: #ffffff; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a:hover { color: #ff5722; }
+        .logo { font-size: 20px; color: #ff5722; font-weight: bold; }
+        
+        .main-container { max-width: 1100px; margin: 30px auto; padding: 20px; }
+        h1 { color: #ff5722; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px; }
+
+        /* Grilla completa de catálogo */
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .card { background: #1a1a1a; border-radius: 8px; overflow: hidden; border: 1px solid #2a2a2a; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .card img { width: 100%; height: 160px; object-fit: cover; background-color: #333; }
+        .card-content { padding: 15px; }
+        .card-content h3 { font-size: 16px; margin: 0 0 10px 0; color: #fff; }
+        .card-content p { font-size: 13px; color: #aaa; margin: 0 0 15px 0; }
+        .card-link { color: #ff5722; text-decoration: none; font-size: 14px; font-weight: bold; }
+
+        @media (max-width: 768px) {
+            .grid-3 { grid-template-columns: 1fr; }
+        }
+        footer { text-align: center; padding: 20px; color: #777; font-size: 14px; border-top: 1px solid #222; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <!-- MENÚ SUPERIOR -->
+    <nav>
+        <div class="logo">DramasParaVer</div>
+        <div>
+            <a href="index.html">Inicio</a>
+            <a href="dramas.html" style="color: #ff5722;">Todos los dramas</a>
+            <a href="articulos.html">Artículos</a>
+            <a href="privacidad.html">Política de privacidad</a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <h1>Catálogo Completo: Todos los Dramas</h1>
+        
+        <!-- AQUÍ IRÁN TODAS TUS PÁGINAS PILARES DE FORMA CRECIENTE -->
+        <div class="grid-3">
+            
+            <!-- Drama 1 (Ejemplo: The Heirs - Página Pilar) -->
+            <div class="card">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVBzmENFFkKpPEEicgaTUFKQTlMQZAYsQhSz1NeJucutP0_rPVa0a0yg31Kstwuhqww1eUFxpU4UYgxjWFMjfYFHgbwI3Z7Yy9zFbhi8JUUrQOyxQ9QF0czNA5ltSBMlqZCdqeUjyfv5Y/s1600/the-heirs.jpg" alt="The Heirs">
+                <div class="card-content">
+                    <h3>The Heirs</h3>
+                    <p>Lista completa de capítulos de la serie.</p>
+                    <a href="drama-the-heirs.html" class="card-link">Ver lista de capítulos &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Aquí agregarás los siguientes dramas conforme los vayas creando -->
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 DramasParaVer. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
