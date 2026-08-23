@@ -3,81 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Dramas Para Ver - Inicio</title>
     
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #121212; color: #ffffff; margin: 0; padding: 0; }
-        nav { background-color: #1f1f1f; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #ff5722; }
-        nav a { color: #ffffff; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        nav a:hover { color: #ff5722; }
-        .logo { font-size: 20px; color: #ff5722; font-weight: bold; }
-        
-        .main-container { max-width: 1100px; margin: 20px auto; padding: 20px; }
-        
-        /* Secciones y Bloques */
-        .section-block { margin-bottom: 40px; }
-        .section-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
-        .section-header h2 { color: #ff5722; margin: 0; font-size: 22px; }
-        
-        .btn-ver-mas { background: #ff5722; color: #fff; padding: 8px 15px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: bold; }
-        .btn-ver-mas:hover { background: #e64a19; }
-
-        /* Grillas (Grid) */
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        
-        .card { background: #1a1a1a; border-radius: 8px; overflow: hidden; border: 1px solid #2a2a2a; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); }
-        .card img { width: 100%; height: 160px; object-fit: cover; background-color: #333; }
-        .card-content { padding: 15px; }
-        .card-content h3 { font-size: 16px; margin: 0 0 10px 0; color: #fff; }
-        .card-content p { font-size: 13px; color: #aaa; margin: 0 0 15px 0; }
-        .card-link { color: #ff5722; text-decoration: none; font-size: 14px; font-weight: bold; }
-
-        @media (max-width: 768px) {
-            .grid-3 { grid-template-columns: 1fr; }
-        }
-        footer { text-align: center; padding: 20px; color: #777; font-size: 14px; border-top: 1px solid #222; margin-top: 40px; }
-    </style>
+    <!-- Única línea para conectar los estilos -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- MENÚ SUPERIOR -->
     <!-- MENÚ SUPERIOR ADAPTABLE -->
-<!-- MENÚ SUPERIOR ADAPTABLE -->
-<nav>
-    <div class="nav-container">
-        <!-- Botón Hamburguesa -->
-        <div class="menu-toggle" onclick="toggleMenu()">
-            &#9776;
+    <nav>
+        <div class="nav-container">
+            <!-- Botón Hamburguesa -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                &#9776;
+            </div>
+
+            <!-- Logo al Centro -->
+            <div class="logo">Dramas Para Ver</div>
+
+            <!-- Enlaces del menú -->
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Inicio</a>
+                <a href="dramas-sinopsis.html">Todos los dramas</a>
+                <a href="articulos.html">Artículos</a>
+                <a href="privacidad.html">Política de privacidad</a>
+            </div>
         </div>
+    </nav>
 
-        <!-- Logo al Centro -->
-        <div class="logo">Dramas Para Ver</div>
-
-        <!-- Enlaces del menú -->
-        <div class="nav-links" id="navLinks">
-            <a href="index.html">Inicio</a>
-            <a href="dramas-sinopsis.html">Todos los dramas</a>
-            <a href="articulos.html">Artículos</a>
-            <a href="privacidad.html">Política de privacidad</a>
-        </div>
-    </div>
-</nav>
-
-
-    
-<link rel="stylesheet" href="style.css">
-
-
-
-    
-
-<script>
-    function toggleMenu() {
-        var links = document.getElementById("navLinks");
-        links.classList.toggle("active");
-    }
-</script>
+    <!-- Script del menú hamburguesa -->
+    <script>
+        function toggleMenu() {
+            var links = document.getElementById("navLinks");
+            links.classList.toggle("active");
+        }
+    </script>
 
     <div class="main-container">
 
