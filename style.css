@@ -328,3 +328,12 @@ footer {
     height: 100%;
     border: 0;
 }
+
+/* Forzar un ancho y alto idéntico para las imágenes principales de los posts */
+.post-image img {
+    width: 100% !important;       /* Ocupa todo el ancho disponible del contenedor */
+    max-width: 700px !important;  /* Límite máximo para que no se extienda demasiado en PC */
+    height: 350px !important;     /* Altura fija idéntica para todas las imágenes de los posts */
+    object-fit: cover !important; /* Recorta perfectamente para que no se estiren */
+    border-radius: 6px;
+}
