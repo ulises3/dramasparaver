@@ -77,24 +77,31 @@
     .menu-toggle { display: none; font-size: 24px; color: #ffffff; cursor: pointer; }
 
     /* Adaptación exacta para Celular */
-    @media (max-width: 768px) {
-        nav { padding: 0 5px; }
+    
+@media (max-width: 768px) {
+        /* Reducimos el padding general del nav a 0 para que la hamburguesa toque el borde */
+        nav { padding: 0 5px; } 
+        
         .nav-container { 
             display: grid; 
-            grid-template-columns: 30px 1fr 30px; /* Divide la barra en 3 partes: Izquierda, Centro, Derecha */
+            grid-template-columns: 40px 1fr 40px; 
             align-items: center;
             position: relative;
         }
         
-        /* Oculta el menú horizontal en PC */
-        .menu-toggle { display: block; grid-column: 1; text-align: left; }
+        .menu-toggle { 
+            display: block; 
+            grid-column: 1; 
+            text-align: left; 
+            padding-left: 2px; /* Ajuste milimétrico hacia el borde izquierdo */
+        }
         
-        /* Centra el título de forma perfecta usando la columna del medio */
         .logo { 
             grid-column: 2; 
             text-align: center; 
             font-size: 18px;
         }
+
         
         /* Menú desplegable vertical */
         .nav-links {
