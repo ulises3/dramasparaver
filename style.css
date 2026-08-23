@@ -347,3 +347,17 @@ footer {
     object-fit: cover !important; /* Recorta perfectamente para que no se estiren */
     border-radius: 6px;
 }
+
+
+/* ==========================================
+   ADAPTACIÓN PARA MÓVILES (Fuerza absoluta al final del CSS)
+   ========================================== */
+@media (max-width: 768px) {
+    /* Forzamos al celular a usar una altura horizontal cómoda sin deformar */
+    .post-image img {
+        width: 100% !important;
+        height: 200px !important;
+        max-height: 200px !important;
+        object-fit: cover !important;
+    }
+}
