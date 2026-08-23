@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="Yo3wi_hER3ji4klL7qAsXW4m6AW4WfCJ6cLd-CzAZv8" />
+    <title>Dramas Para Ver - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- MENÚ SUPERIOR ADAPTABLE -->
+    <nav>
+        <div class="nav-container">
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <div class="logo">Dramas Para Ver</div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Inicio</a>
+                <a href="dramas-sinopsis.html">Todos los dramas</a>
+                <a href="articulos.html">Artículos</a>
+                <a href="privacidad.html">Política de privacidad</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            var links = document.getElementById("navLinks");
+            links.classList.toggle("active");
+        }
+    </script>
+
+    <div class="main-container">
+
+       <!-- BLOQUE 1: ÚLTIMAS ENTRADAS (Se llena solo desde el JSON) -->
+        <div class="section-block">
+            <div class="section-header">
+                <h2>Últimas Entradas</h2>
+                <a href="dramas-sinopsis.html" class="btn-ver-mas">Ver más</a>
+            </div>
+            <div class="grid-3" id="contenedor-ultimas">
+                <!-- JavaScript inyectará las tarjetas aquí -->
+            </div>
+        </div>
+
+        <!-- BLOQUE 2: TODOS LOS DRAMAS (Se llena solo desde el JSON) -->
+        <div class="section-block">
+            <div class="section-header">
+                <h2>Todos los Dramas</h2>
+                <a href="dramas-sinopsis.html" class="btn-ver-mas">Ver más</a>
+            </div>
+            <div class="grid-3" id="contenedor-dramas">
+                <!-- JavaScript inyectará las tarjetas aquí -->
+            </div>
+        </div>
+
+        <!-- BLOQUE 3: DRAMAS DESTACADOS (Puedes automatizarlo después igual) -->
+        <div class="section-block">
+            <div class="section-header">
+                <h2>Dramas Destacados</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card"><div class="card-content"><h3>Destacado 1</h3><p>Serie recomendada...</p><a href="#" class="card-link">Ver serie &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Destacado 2</h3><p>Serie recomendada...</p><a href="#" class="card-link">Ver serie &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Destacado 3</h3><p>Serie recomendada...</p><a href="#" class="card-link">Ver serie &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Destacado 4</h3><p>Serie recomendada...</p><a href="#" class="card-link">Ver serie &rarr;</a></div></div>
+            </div>
+        </div>
+
+        <!-- BLOQUE 4: ARTÍCULOS -->
+        <div class="section-block">
+            <div class="section-header">
+                <h2>Artículos y Noticias</h2>
+                <a href="articulos.html" class="btn-ver-mas">Ver más</a>
+            </div>
+            <div class="grid-3">
+                <div class="card"><div class="card-content"><h3>Artículo 1</h3><p>Noticia o novedad...</p><a href="#" class="card-link">Leer artículo &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Artículo 2</h3><p>Noticia o novedad...</p><a href="#" class="card-link">Leer artículo &rarr;</a></div></div>
+                <div class="card"><div class="card-content"><h3>Artículo 3</h3><p>Noticia o novedad...</p><a href="#" class="card-link">Leer artículo &rarr;</a></div></div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 DramasParaVer. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SCRIPT INTELIGENTE QUE LEE EL JSON Y ARMA LA PÁGINA -->
+    <script>
+        fetch('dramas.json')
+            .then(response => response.json())
+            .then(data => {
+                // Rellenar Últimas Entradas
+                const gridUltimas = document.getElementById('contenedor-ultimas');
+                let htmlUltimas = '';
+                data.ultimas_entradas.forEach(item => {
+                    htmlUltimas += `
+                        <div class="card">
+                            <img src="${item.imagen}" alt="${item.titulo}">
+                            <div class="card-content">
+                                <h3>${item.titulo}</h3>
+                                <p>${item.descripcion}</p>
+                                <a href="${item.link}" class="card-link">Ver capítulo &rarr;</a>
+                            </div>
+                        </div>
+                    `;
+                });
+                gridUltimas.innerHTML = htmlUltimas;
+
+                // Rellenar Todos los Dramas
+                const gridDramas = document.getElementById('contenedor-dramas');
+                let htmlDramas = '';
+                data.todos_los_dramas.forEach(item => {
+                    htmlDramas += `
+                        <div class="card">
+                            <img src="${item.imagen}" alt="${item.titulo}">
+                            <div class="card-content">
+                                <h3>${item.titulo}</h3>
+                                <p>${item.descripcion}</p>
+                                <a href="${item.link}" class="card-link">Ver lista &rarr;</a>
+                            </div>
+                        </div>
+                    `;
+                });
+                gridDramas.innerHTML = htmlDramas;
+            })
+            .catch(error => console.error('Error al cargar el JSON:', error));
+    </script>
+</body>
+</html>
