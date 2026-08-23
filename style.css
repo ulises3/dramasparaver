@@ -143,14 +143,7 @@ nav {
         padding: 0 5px; 
     }
 
-  /* Ajusta la altura de las imágenes de los posts para que se vean bien en celulares */
-     /* Forzamos al máximo para que el celular obedezca sí o sí */
-    .post-image img {
-        width: 100% !important;
-        height: 180px !important;
-        max-height: 180px !important;
-        object-fit: cover !important;
-    }
+  
 
    
     .nav-container { 
