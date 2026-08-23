@@ -142,7 +142,19 @@ nav {
     nav { 
         padding: 0 5px; 
     }
+
+  /* Ajusta la altura de las imágenes de los posts para que se vean bien en celulares */
+    .post-image img {
+        height: 200px !important; /* Una altura más baja y cómoda para pantallas pequeñas */
+    }
     
+    /* Si también quieres ajustar la imagen de la página pilar en móvil */
+    .pilar-header img {
+        width: 100% !important;
+        height: 250px !important;
+    }
+}
+   
     .nav-container { 
         display: grid; 
         grid-template-columns: 40px 1fr 40px; 
