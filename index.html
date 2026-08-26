@@ -33,9 +33,20 @@
     <div class="main-container">
 
 
-        <!-- BANNER PUBLICITARIO - INICIO -->
-<div class="ad-container ad-top" id="slot-banner"></div>
-    <!-- FIN DEL BANNER -->
+        <!-- BANNER PUBLICITARIO -->
+<div class="ad-container ad-top">
+    <span class="ad-label">Publicidad</span>
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '28ea1e8bfb954e84af148468a2d3c686',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://fundingfashioned.com/28ea1e8bfb954e84af148468a2d3c686/invoke.js"></script>
+</div>
 
        <!-- BLOQUE 1: ÚLTIMAS ENTRADAS (Se llena solo desde el JSON) -->
         <div class="section-block">
@@ -50,7 +61,20 @@
 
         
         <!-- BANNER PUBLICITARIO - INICIO -->
-<div class="ad-container ad-top" id="slot-banner"></div>
+<!-- BANNER PUBLICITARIO -->
+<div class="ad-container ad-top">
+    <span class="ad-label">Publicidad</span>
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '28ea1e8bfb954e84af148468a2d3c686',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://fundingfashioned.com/28ea1e8bfb954e84af148468a2d3c686/invoke.js"></script>
+</div>
     <!-- FIN DEL BANNER -->
 
         <!-- BLOQUE 2: TODOS LOS DRAMAS (Se llena solo desde el JSON) -->
@@ -66,7 +90,20 @@
 
         
         <!-- BANNER PUBLICITARIO - INICIO -->
-<div class="ad-container ad-top" id="slot-banner"></div>
+<!-- BANNER PUBLICITARIO -->
+<div class="ad-container ad-top">
+    <span class="ad-label">Publicidad</span>
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '28ea1e8bfb954e84af148468a2d3c686',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://fundingfashioned.com/28ea1e8bfb954e84af148468a2d3c686/invoke.js"></script>
+</div>
     <!-- FIN DEL BANNER -->
 
         <!-- BLOQUE 3: DRAMAS DESTACADOS (Puedes automatizarlo después igual) -->
@@ -143,18 +180,7 @@
             .catch(error => console.error('Error al cargar el JSON:', error));
     </script>
 
-    <script>
-    fetch('banner-ad.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('slot-banner').innerHTML = data;
-            // Forzamos la ejecución de los scripts de Adsterra insertados
-            var scripts = document.getElementById('slot-banner').getElementsByTagName('script');
-            for (var i = 0; i < scripts.length; i++) {
-                eval(scripts[i].innerHTML);
-            }
-        });
-    </script>
+
 
 </body>
 </html>
