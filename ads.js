@@ -10,6 +10,18 @@ document.addEventListener("DOMContentLoaded", function() {
             <!-- PEGA AQUÍ TU SCRIPT EXACTO DE ADSTERRA -->
             <script type="text/javascript">
                 // Tu código de Adsterra va aquí adentro
+<script>
+  atOptions = {
+    'key' : '28ea1e8bfb954e84af148468a2d3c686',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://fundingfashioned.com/28ea1e8bfb954e84af148468a2d3c686/invoke.js"></script>
+
+                
             </script>
         `;
     }
@@ -22,6 +34,18 @@ document.addEventListener("DOMContentLoaded", function() {
             <!-- PEGA AQUÍ TU SCRIPT EXACTO DE ADSTERRA -->
             <script type="text/javascript">
                 // Tu código de Adsterra va aquí adentro
+
+                <script>
+  atOptions = {
+    'key' : '28ea1e8bfb954e84af148468a2d3c686',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://fundingfashioned.com/28ea1e8bfb954e84af148468a2d3c686/invoke.js"></script>
+
             </script>
         `;
     }
