@@ -1,29 +1,30 @@
-// Archivo: ads.js - Inyector correcto para banners de Adsterra
-
+// Archivo: ads.js
 document.addEventListener("DOMContentLoaded", function() {
     
-    // Función para insertar el banner de Adsterra de forma segura
-    function insertarBannerAdsterra(containerId) {
-        var contenedor = document.getElementById(containerId);
-        if (!contenedor) return;
+    // Código HTML exacto que te dio Adsterra para el banner
+    var adCode = `
+        <span class="ad-label">Publicidad</span>
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '28ea1e8bfb954e84af148468a2d3c686',
+                'format' : 'iframe',
+                'height' : 250,
+                'width' : 300,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="https://fundingfashioned.com/28ea1e8bfb954e84af148468a2d3c686/invoke.js"></script>
+    `;
 
-        // 1. Creamos la etiqueta de configuración (atOptions)
-        var atOptionsScript = document.createElement('script');
-        atOptionsScript.type = 'text/javascript';
-        atOptionsScript.text = "atOptions = { 'key' : '28ea1e8bfb954e84af148468a2d3c686', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };";
-
-        // 2. Creamos la etiqueta que llama al script externo de Adsterra
-        var invokeScript = document.createElement('script');
-        invokeScript.type = 'text/javascript';
-        invokeScript.src = 'https://fundingfashioned.com/28ea1e8bfb954e84af148468a2d3c686/invoke.js';
-
-        // 3. Limpiamos el contenedor y añadimos la etiqueta de la etiqueta de publicidad y los scripts
-        contenedor.innerHTML = '<span class="ad-label">Publicidad</span>';
-        contenedor.appendChild(atOptionsScript);
-        contenedor.appendChild(invokeScript);
+    // Inyectamos en el banner superior si existe
+    var topAd = document.getElementById("ad-top-container");
+    if (topAd) {
+        topAd.innerHTML = adCode;
     }
 
-    // Ejecutamos la función para los contenedores que existan en la página
-    insertarBannerAdsterra("ad-top-container");
-    insertarBannerAdsterra("ad-video-container");
+    // Inyectamos en el banner del video si existe
+    var videoAd = document.getElementById("ad-video-container");
+    if (videoAd) {
+        videoAd.innerHTML = adCode;
+    }
 });
