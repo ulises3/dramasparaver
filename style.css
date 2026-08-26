@@ -368,6 +368,42 @@ footer {
     background-color: #e50914; /* Color de acento al pasar el mouse (puedes cambiarlo al color que uses) */
 }
 
+.terabox-container {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.terabox-container h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.terabox-container p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.btn-terabox {
+    display: inline-block;
+    background-color: #e50914;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-terabox:hover {
+    background-color: #f40612;
+}
+
 /* ==========================================
    ADAPTACIÓN PARA MÓVILES (Fuerza absoluta al final del CSS)
    ========================================== */
