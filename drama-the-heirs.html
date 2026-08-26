@@ -154,7 +154,18 @@
         <p>&copy; 2026 DramasParaVer. Todos los derechos reservados.</p>
     </footer>
 
-
+<script>
+    fetch('banner-ad.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('slot-banner').innerHTML = data;
+            // Forzamos la ejecución de los scripts de Adsterra insertados
+            var scripts = document.getElementById('slot-banner').getElementsByTagName('script');
+            for (var i = 0; i < scripts.length; i++) {
+                eval(scripts[i].innerHTML);
+            }
+        });
+</script>
     
 </body>
 </html>
