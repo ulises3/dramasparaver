@@ -368,40 +368,31 @@ footer {
     background-color: #e50914; /* Color de acento al pasar el mouse (puedes cambiarlo al color que uses) */
 }
 
-.terabox-container {
-    background: #1e1e1e;
-    border: 1px solid #333;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
+/* ESTILOS PARA LOS ESPACIOS PUBLICITARIOS */
+.ad-container {
+    width: 100%;
     margin: 20px 0;
+    text-align: center;
+    background: #181818; /* Un tono sutil que combine con tu fondo */
+    border: 1px dashed #333; /* Borde punteado elegante para identificar la zona */
+    border-radius: 6px;
+    padding: 10px;
+    overflow: hidden;
 }
 
-.terabox-container h3 {
-    color: #fff;
-    margin-bottom: 10px;
+.ad-label {
+    display: block;
+    font-size: 10px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
 }
 
-.terabox-container p {
-    color: #aaa;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.btn-terabox {
-    display: inline-block;
-    background-color: #e50914;
-    color: #fff;
-    padding: 12px 25px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.btn-terabox:hover {
-    background-color: #f40612;
+.ad-placeholder {
+    color: #555;
+    font-size: 13px;
+    padding: 20px;
 }
 
 /* ==========================================
