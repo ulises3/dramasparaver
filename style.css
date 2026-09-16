@@ -145,16 +145,19 @@ nav {
     }
 
 
-   .video-container {
-        width: 100vw;               /* Ocupa el 100% del ancho de la ventana (viewport) */
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;         /* Truco CSS para salir del contenedor padre */
-        margin-right: -50vw;
-        border-radius: 0;           /* Opcional: quita las esquinas redondeadas para que parezca nativo */
-        border-top: 1px solid #333;
-        border-bottom: 1px solid #333;
+     .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .video-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        left: auto !important;
+        right: auto !important;
+        border-radius: 4px; /* Mantiene una estética limpia */
     }
 
     .nav-container { 
