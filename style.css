@@ -145,19 +145,25 @@ nav {
     }
 
 
-     .container {
-        padding-left: 10px;
-        padding-right: 10px;
+      /* Hacemos que el contenedor principal en celular no tenga relleno lateral */
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
+    /* Pero devolvemos el relleno solo a los textos y títulos para que no queden pegados al borde */
+    .container > *:not(.video-container) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Y el video se extiende al 100% real de lado a lado sin márgenes */
     .video-container {
         width: 100% !important;
         max-width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
-        left: auto !important;
-        right: auto !important;
-        border-radius: 4px; /* Mantiene una estética limpia */
+        border-radius: 0 !important; /* Bordes rectos tipo app de streaming */
     }
 
     .nav-container { 
