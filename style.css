@@ -144,6 +144,19 @@ nav {
         padding: 0 5px; 
     }
 
+
+   .video-container {
+        width: 100vw;               /* Ocupa el 100% del ancho de la ventana (viewport) */
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;         /* Truco CSS para salir del contenedor padre */
+        margin-right: -50vw;
+        border-radius: 0;           /* Opcional: quita las esquinas redondeadas para que parezca nativo */
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+    }
+
     .nav-container { 
         display: grid; 
         grid-template-columns: 40px 1fr 40px; 
