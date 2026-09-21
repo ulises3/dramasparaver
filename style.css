@@ -427,3 +427,9 @@ footer {
         border-right: none;
     }
 }
+
+/* Limitar el tamaño del video en pantallas de PC */
+.video-container {
+    max-width: 800px;  /* Ajusta este valor si lo prefieres un poco más ancho o angosto en PC */
+    margin: 20px auto; /* Centra automáticamente el reproductor en la pantalla grande */
+}
