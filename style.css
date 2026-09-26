@@ -139,7 +139,7 @@ nav {
 /* ==========================================
    3. ADAPTACIÓN PARA MÓVILES (Celulares)
    ========================================== */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     nav { 
         padding: 0 5px; 
     }
