@@ -163,6 +163,7 @@ nav {
         margin-left: 0 !important;
         margin-right: 0 !important;
         border-radius: 0 !important; /* Bordes rectos tipo app de streaming */
+        padding-bottom: 75% !important; /* CAMBIO REALIZADO: Relación 16:12 exclusiva para celulares */
     }
 
     .nav-container { 
