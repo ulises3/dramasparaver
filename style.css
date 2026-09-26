@@ -209,7 +209,7 @@ nav {
         font-size: 16px;
     }
 
-    /* Las tarjetas se ajustan exactamente a 2 columnas en el celular con altura vertical proporcional */
+    /* Las tarjetas normales se ajustan a 2 columnas en el celular */
     .grid-3 {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
@@ -217,6 +217,25 @@ nav {
 
     .card img {
         height: 220px; /* Altura vertical adaptada para pantallas de celular */
+    }
+
+    /* ==========================================================
+       CONFIGURACIÓN EXCLUSIVA PARA EL BLOQUE 1 (ÚLTIMAS ENTRADAS)
+       ========================================================== */
+    #contenedor-ultimas {
+        grid-template-columns: 1fr !important; /* 1 post por fila */
+        gap: 15px;
+    }
+
+    #contenedor-ultimas .card img {
+        width: 100%;
+        aspect-ratio: 16 / 9; /* Relación de aspecto 16:9 perfecta */
+        height: auto !important;
+    }
+
+    /* Mostrar únicamente los primeros 4 posts y ocultar del 5 en adelante */
+    #contenedor-ultimas .card:nth-child(n+5) {
+        display: none !important;
     }
 }
 
