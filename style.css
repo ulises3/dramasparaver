@@ -420,25 +420,3 @@ footer {
     }
 }
 
-/* Limitar el tamaño del video en pantallas de PC */
-/* Configuración limpia para PC sin fondos negros gigantes */
-.video-container {
-    position: relative;
-    width: 100%;
-    max-width: 900px;        /* Un ancho cómodo y grande para PC */
-    padding-bottom: 56.25%;  /* Proporción exacta 16:9 para que el video llene el espacio sin barras negras */
-    height: 0;
-    background: #000;
-    border-radius: 6px;
-    overflow: hidden;
-    margin: 20px auto;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
