@@ -139,7 +139,7 @@ nav {
 /* ==========================================
    3. ADAPTACIÓN PARA MÓVILES (Celulares)
    ========================================== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     nav { 
         padding: 0 5px; 
     }
@@ -337,18 +337,7 @@ footer {
     margin-bottom: 15px;
 }
 
-/* Contenedor adaptable para los videos (Iframe) */
-.video-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px; /* El límite que definimos para que no se vea gigante en PC */
-    padding-bottom: 75%; /* Proporción 12:9 (75%) para PC */
-    height: 0;
-    background: #000;
-    border-radius: 6px;
-    overflow: hidden;
-    margin: 20px auto;
-}
+
 
 /* ESTILOS PARA LA NAVEGACIÓN DE CAPÍTULOS */
 .navegacion-capitulos {
