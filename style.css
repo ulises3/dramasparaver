@@ -144,8 +144,7 @@ nav {
         padding: 0 5px; 
     }
 
-
-      /* Hacemos que el contenedor principal en celular no tenga relleno lateral */
+    /* Hacemos que el contenedor principal en celular no tenga relleno lateral */
     .container {
         padding-left: 0 !important;
         padding-right: 0 !important;
@@ -337,7 +336,27 @@ footer {
     margin-bottom: 15px;
 }
 
+/* Contenedor adaptable y fluido para los videos (Iframe) */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;        /* Ancho controlado y elegante para PC */
+    padding-bottom: 56.25%;  /* Proporción estándar 16:9 limpia */
+    height: 0;
+    background: #000;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 20px auto;
+}
 
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+}
 
 /* ESTILOS PARA LA NAVEGACIÓN DE CAPÍTULOS */
 .navegacion-capitulos {
@@ -403,9 +422,8 @@ footer {
         width: 100%;        
         margin-left: 0;
         margin-right: 0;
-        border-radius: 0;   
+        border-radius: 0;    
         border-left: none;  
         border-right: none;
     }
 }
-
