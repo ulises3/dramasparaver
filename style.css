@@ -360,7 +360,7 @@ footer {
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 900px;        /* Ancho controlado y elegante para PC */
+    max-width: 750px;        /* Ancho controlado y elegante para PC */
     padding-bottom: 56.25%;  /* Proporción estándar 16:9 limpia */
     height: 0;
     background: #000;
