@@ -336,7 +336,7 @@ footer {
 .video-container {
     position: relative;
     width: 80%;
-    max-width: 900px;        
+    max-width: 800px;        
     padding-bottom: 56.25%;  /* Altura proporcional limpia en base al ancho */
     height: 0;
     background: #000;
