@@ -335,7 +335,7 @@ footer {
 /* CONTENEDOR DE VIDEO CORREGIDO (Proporción 16:9 con porcentaje real) */
 .video-container {
     position: relative;
-    width: 100%;
+    width: 80%;
     max-width: 900px;        
     padding-bottom: 56.25%;  /* Altura proporcional limpia en base al ancho */
     height: 0;
