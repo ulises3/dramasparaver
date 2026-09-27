@@ -101,27 +101,10 @@ nav {
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-/* FORMATO 16:9 PARA LAS PORTADAS EN PC */
-.card img {
-    width: 100%;
-    aspect-ratio: 16 / 9; /* Relación 16:9 limpia */
-    height: auto !important;
-    object-fit: cover; 
-    display: block;
-}
-
-/* Hacemos que la imagen envuelta en enlace sea clickeable correctamente */
+/* Hacemos que la imagen envuelta en enlace actúe como bloque */
 .card a {
     display: block;
     text-decoration: none;
-}
-
-.card a img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto !important;
-    object-fit: cover;
-    display: block;
 }
 
 /* ==========================================================
@@ -171,26 +154,23 @@ nav {
         padding: 0 5px; 
     }
 
-    /* Contenedor principal sin relleno lateral en celular */
     .container {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
-    /* Relleno solo para los textos y títulos para que no queden pegados al borde */
     .container > *:not(.video-container) {
         padding-left: 15px;
         padding-right: 15px;
     }
 
-    /* Video a pantalla completa con proporción 16:12 */
     .video-container {
         width: 100% !important;
         max-width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         border-radius: 0 !important; 
-        padding-bottom: 75% !important; /* Relación 16:12 exclusiva para celulares */
+        padding-bottom: 75% !important; 
     }
 
     .nav-container { 
@@ -237,19 +217,18 @@ nav {
         font-size: 16px;
     }
 
-    /* TODAS LAS GRILLAS EN CELULAR A 1 SOLA COLUMNA CON PROPORCIÓN 16:9 */
     .grid-3 {
         grid-template-columns: 1fr !important;
         gap: 15px;
     }
 
+    /* En celulares forzamos proporción 16:9 limpia */
     .card img, .card a img {
         width: 100% !important;
-        aspect-ratio: 16 / 9 !important; /* Mantiene la proporción 16:9 a todo lo ancho del celular */
+        aspect-ratio: 16 / 9 !important;
         height: auto !important;
     }
 
-    /* Límite de 4 entradas en celular para TODAS las secciones principales (puedes cambiar el 5 si quieres otro número) */
     .grid-3 .card:nth-child(n+5),
     #contenedor-ultimas .card:nth-child(n+5) {
         display: none !important;
@@ -372,7 +351,6 @@ footer {
     margin-bottom: 15px;
 }
 
-/* Contenedor adaptable y fluido para los videos (Iframe) */
 .video-container {
     position: relative;
     width: 100%;
@@ -394,7 +372,6 @@ footer {
     border: 0;
 }
 
-/* ESTILOS PARA LA NAVEGACIÓN DE CAPÍTULOS */
 .navegacion-capitulos {
     display: flex;
     justify-content: space-between;
@@ -420,7 +397,6 @@ footer {
     background-color: #e50914;
 }
 
-/* ESTILOS PARA LOS ESPACIOS PUBLICITARIOS */
 .ad-container {
     display: flex;
     flex-direction: column;
@@ -452,7 +428,6 @@ footer {
     padding: 20px;
 }
 
-/* ESTILO RESPONSIVO SEGURO PARA CELULARES */
 @media screen and (max-width: 600px) {
     .ad-container {
         width: 100%;        
@@ -464,7 +439,9 @@ footer {
     }
 }
 
-/* Corrección para que las imágenes de las tarjetas no se vean gigantes ni anchas en la PC */
+/* ==========================================
+   6. CONTROL DEFINITIVO DE IMÁGENES EN PC (Ancho 100% y altura fija)
+   ========================================== */
 .card img, 
 .card a img {
     width: 100% !important;
