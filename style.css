@@ -463,3 +463,12 @@ footer {
         border-right: none;
     }
 }
+
+/* Corrección para que las imágenes de las tarjetas no se vean gigantes ni anchas en la PC */
+.card img, 
+.card a img {
+    width: 100% !important;
+    height: 180px !important; 
+    object-fit: cover !important; 
+    display: block;
+}
