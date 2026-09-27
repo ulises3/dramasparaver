@@ -110,15 +110,27 @@ nav {
     display: block;
 }
 
+/* Hacemos que la imagen envuelta en enlace sea clickeable correctamente */
+.card a {
+    display: block;
+    text-decoration: none;
+}
+
+.card a img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    object-fit: cover;
+    display: block;
+}
+
 /* ==========================================================
    LÍMITE DE 6 ENTRADAS POR BLOQUE EN PC
    ========================================================== */
-/* Bloque 1: Últimas entradas */
 #contenedor-ultimas .card:nth-child(n+7) {
     display: none !important;
 }
 
-/* Bloque 2, 3 y 4 (Aplica a cualquier .grid-3 genérico o puedes adaptarlo si usas IDs específicos) */
 .grid-3 .card:nth-child(n+7) {
     display: none !important;
 }
@@ -159,25 +171,25 @@ nav {
         padding: 0 5px; 
     }
 
-    /* Hacemos que el contenedor principal en celular no tenga relleno lateral */
+    /* Contenedor principal sin relleno lateral en celular */
     .container {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
-    /* Pero devolvemos el relleno solo a los textos y títulos para que no queden pegados al borde */
+    /* Relleno solo para los textos y títulos para que no queden pegados al borde */
     .container > *:not(.video-container) {
         padding-left: 15px;
         padding-right: 15px;
     }
 
-    /* Y el video se extiende al 100% real de lado a lado sin márgenes + Proporción 16:12 */
+    /* Video a pantalla completa con proporción 16:12 */
     .video-container {
         width: 100% !important;
         max-width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
-        border-radius: 0 !important; /* Bordes rectos tipo app de streaming */
+        border-radius: 0 !important; 
         padding-bottom: 75% !important; /* Relación 16:12 exclusiva para celulares */
     }
 
@@ -225,32 +237,20 @@ nav {
         font-size: 16px;
     }
 
-    /* Las tarjetas normales se ajustan a 2 columnas en el celular */
+    /* TODAS LAS GRILLAS EN CELULAR A 1 SOLA COLUMNA CON PROPORCIÓN 16:9 */
     .grid-3 {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px;
-    }
-
-    .card img {
-        height: 220px; /* Altura vertical adaptada para pantallas de celular */
-        aspect-ratio: auto !important;
-    }
-
-    /* ==========================================================
-       CONFIGURACIÓN EXCLUSIVA PARA EL BLOQUE 1 (ÚLTIMAS ENTRADAS) EN MÓVIL
-       ========================================================== */
-    #contenedor-ultimas {
-        grid-template-columns: 1fr !important; /* 1 post por fila */
+        grid-template-columns: 1fr !important;
         gap: 15px;
     }
 
-    #contenedor-ultimas .card img {
-        width: 100%;
-        aspect-ratio: 16 / 9; /* Relación de aspecto 16:9 perfecta */
+    .card img, .card a img {
+        width: 100% !important;
+        aspect-ratio: 16 / 9 !important; /* Mantiene la proporción 16:9 a todo lo ancho del celular */
         height: auto !important;
     }
 
-    /* Mostrar únicamente los primeros 4 posts y ocultar del 5 en adelante en móviles */
+    /* Límite de 4 entradas en celular para TODAS las secciones principales (puedes cambiar el 5 si quieres otro número) */
+    .grid-3 .card:nth-child(n+5),
     #contenedor-ultimas .card:nth-child(n+5) {
         display: none !important;
     }
@@ -376,8 +376,8 @@ footer {
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 900px;        /* Ancho controlado y elegante para PC */
-    padding-bottom: 56.25%;  /* Proporción estándar 16:9 limpia */
+    max-width: 900px;        
+    padding-bottom: 56.25px;  
     height: 0;
     background: #000;
     border-radius: 6px;
