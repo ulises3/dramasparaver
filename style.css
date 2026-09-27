@@ -355,7 +355,7 @@ footer {
     position: relative;
     width: 100%;
     max-width: 900px;        
-    padding-bottom: 56.25px;  
+    padding-bottom: 56.25%; /* <-- CAMBIADO A PORCENTAJE */
     height: 0;
     background: #000;
     border-radius: 6px;
