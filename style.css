@@ -55,7 +55,7 @@ nav {
 
 
 /* ==========================================
-   2. GRILLAS Y TARJETAS (POSTS)
+   2. GRILLAS Y TARJETAS (POSTS) - CONFIGURACIÓN PC (3 COLUMNAS)
    ========================================== */
 .section-block {
     max-width: 1100px;
@@ -87,6 +87,7 @@ nav {
     font-weight: bold;
 }
 
+/* 3 COLUMNAS PARA PC EN TODAS LAS GRILLAS */
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -100,12 +101,26 @@ nav {
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-/* FORMATO VERTICAL RECTANGULAR PARA LAS PORTADAS DE LOS POSTS */
+/* FORMATO 16:9 PARA LAS PORTADAS EN PC */
 .card img {
     width: 100%;
-    height: 320px; /* Altura vertical para PC tipo póster */
-    object-fit: cover; /* Evita que se deformen o estiren */
+    aspect-ratio: 16 / 9; /* Relación 16:9 limpia */
+    height: auto !important;
+    object-fit: cover; 
     display: block;
+}
+
+/* ==========================================================
+   LÍMITE DE 6 ENTRADAS POR BLOQUE EN PC
+   ========================================================== */
+/* Bloque 1: Últimas entradas */
+#contenedor-ultimas .card:nth-child(n+7) {
+    display: none !important;
+}
+
+/* Bloque 2, 3 y 4 (Aplica a cualquier .grid-3 genérico o puedes adaptarlo si usas IDs específicos) */
+.grid-3 .card:nth-child(n+7) {
+    display: none !important;
 }
 
 .card-content {
@@ -156,14 +171,14 @@ nav {
         padding-right: 15px;
     }
 
-    /* Y el video se extiende al 100% real de lado a lado sin márgenes */
+    /* Y el video se extiende al 100% real de lado a lado sin márgenes + Proporción 16:12 */
     .video-container {
         width: 100% !important;
         max-width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         border-radius: 0 !important; /* Bordes rectos tipo app de streaming */
-        padding-bottom: 75% !important; /* CAMBIO REALIZADO: Relación 16:12 exclusiva para celulares */
+        padding-bottom: 75% !important; /* Relación 16:12 exclusiva para celulares */
     }
 
     .nav-container { 
@@ -212,16 +227,17 @@ nav {
 
     /* Las tarjetas normales se ajustan a 2 columnas en el celular */
     .grid-3 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 10px;
     }
 
     .card img {
         height: 220px; /* Altura vertical adaptada para pantallas de celular */
+        aspect-ratio: auto !important;
     }
 
     /* ==========================================================
-       CONFIGURACIÓN EXCLUSIVA PARA EL BLOQUE 1 (ÚLTIMAS ENTRADAS)
+       CONFIGURACIÓN EXCLUSIVA PARA EL BLOQUE 1 (ÚLTIMAS ENTRADAS) EN MÓVIL
        ========================================================== */
     #contenedor-ultimas {
         grid-template-columns: 1fr !important; /* 1 post por fila */
@@ -234,7 +250,7 @@ nav {
         height: auto !important;
     }
 
-    /* Mostrar únicamente los primeros 4 posts y ocultar del 5 en adelante */
+    /* Mostrar únicamente los primeros 4 posts y ocultar del 5 en adelante en móviles */
     #contenedor-ultimas .card:nth-child(n+5) {
         display: none !important;
     }
@@ -360,7 +376,7 @@ footer {
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 750px;        /* Ancho controlado y elegante para PC */
+    max-width: 900px;        /* Ancho controlado y elegante para PC */
     padding-bottom: 56.25%;  /* Proporción estándar 16:9 limpia */
     height: 0;
     background: #000;
