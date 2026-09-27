@@ -87,7 +87,6 @@ nav {
     font-weight: bold;
 }
 
-/* 3 COLUMNAS PARA PC EN TODAS LAS GRILLAS */
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -101,15 +100,11 @@ nav {
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-/* Hacemos que la imagen envuelta en enlace actúe como bloque */
 .card a {
     display: block;
     text-decoration: none;
 }
 
-/* ==========================================================
-   LÍMITE DE 6 ENTRADAS POR BLOQUE EN PC
-   ========================================================== */
 #contenedor-ultimas .card:nth-child(n+7) {
     display: none !important;
 }
@@ -164,15 +159,6 @@ nav {
         padding-right: 15px;
     }
 
-    .video-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        border-radius: 0 !important; 
-        padding-bottom: 75% !important; 
-    }
-
     .nav-container { 
         display: grid; 
         grid-template-columns: 40px 1fr 40px; 
@@ -222,18 +208,12 @@ nav {
         gap: 15px;
     }
 
-    /* En celulares forzamos proporción 16:9 limpia */
-    .card img, .card a img {
-        width: 100% !important;
-        aspect-ratio: 16 / 9 !important;
-        height: auto !important;
-    }
-
     .grid-3 .card:nth-child(n+5),
     #contenedor-ultimas .card:nth-child(n+5) {
         display: none !important;
     }
 }
+
 
 /* ==========================================
    4. ESTILOS PARA PÁGINAS PILAR Y CAPÍTULOS
@@ -319,8 +299,9 @@ footer {
     }
 }
 
+
 /* ==========================================
-   5. ESTILOS PARA LAS ENTRADAS Y CAPÍTULOS
+   5. ESTILOS PARA LAS ENTRADAS, VIDEOS Y CAPÍTULOS
    ========================================== */
 .container h1 {
     color: #ff5722;
@@ -351,11 +332,12 @@ footer {
     margin-bottom: 15px;
 }
 
+/* CONTENEDOR DE VIDEO CORREGIDO (Proporción 16:9 con porcentaje real) */
 .video-container {
     position: relative;
     width: 100%;
     max-width: 900px;        
-    padding-bottom: 56.25%; /* <-- CAMBIADO A PORCENTAJE */
+    padding-bottom: 56.25%;  /* Altura proporcional limpia en base al ancho */
     height: 0;
     background: #000;
     border-radius: 6px;
@@ -370,6 +352,18 @@ footer {
     width: 100% !important;
     height: 100% !important;
     border: 0;
+}
+
+/* Ajuste específico para celulares en el reproductor */
+@media (max-width: 768px) {
+    .video-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-radius: 0 !important; 
+        padding-bottom: 56.25% !important; 
+    }
 }
 
 .navegacion-capitulos {
@@ -422,12 +416,6 @@ footer {
     margin-bottom: 5px;
 }
 
-.ad-placeholder {
-    color: #555;
-    font-size: 13px;
-    padding: 20px;
-}
-
 @media screen and (max-width: 600px) {
     .ad-container {
         width: 100%;        
@@ -439,8 +427,9 @@ footer {
     }
 }
 
+
 /* ==========================================
-   6. CONTROL DEFINITIVO DE IMÁGENES EN PC (Ancho 100% y altura fija)
+   6. CONTROL DEFINITIVO DE IMÁGENES EN PC Y MÓVIL
    ========================================== */
 .card img, 
 .card a img {
