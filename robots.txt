@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ulises3.github.io/dramasparaver/sitemap.xml
