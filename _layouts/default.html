@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>{{ page.title }}</title>
-  <meta name="description" content="{{ page.description }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
 </head>
 <body>
-  {{ content }}
+
+<nav>
+    <div class="nav-container">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            &#9776;
+        </div>
+       <a href="{{ site.baseurl }}/index.html" class="logo" style="text-decoration: none;">Dramas Para Ver</a>
+        <div class="nav-links" id="navLinks">
+            <a href="{{ site.baseurl }}/index.html">Inicio</a>
+            <a href="{{ site.baseurl }}/dramas-sinopsis.html">Todos los dramas</a>
+            <a href="{{ site.baseurl }}/articulos.html">Artículos</a>
+            <a href="{{ site.baseurl }}/privacidad.html">Política de privacidad</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    function toggleMenu() {
+        var links = document.getElementById("navLinks");
+        links.classList.toggle("active");
+    }
+</script>
+
+<div class="container">
+    {{ content }}
+</div>
+
+<footer>
+    <p>&copy; 2026 DramasParaVer. Todos los derechos reservados.</p>
+</footer>
+
 </body>
 </html>

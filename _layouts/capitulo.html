@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<h1>{{ page.h1 }}</h1>
+
+<div class="ad-container ad-top">
+    <span class="ad-label">Publicidad</span>
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '28ea1e8bfb954e84af148468a2d3c686',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://fundingfashioned.com/28ea1e8bfb954e84af148468a2d3c686/invoke.js"></script>
+</div>
+
+<div class="post-image"> 
+    <img src="{{ page.imagen }}" alt="{{ page.title }}">
+</div>
+
+<div class="post-text">
+    {{ content }}
+</div>
+
+<div class="video-container">
+    <iframe width="100%" height="440" frameborder="0" src="{{ page.video }}" allowfullscreen></iframe>
+</div>
+
+<div class="navegacion-capitulos">
+    {% if page.anterior %}
+        <a href="{{ site.baseurl }}/{{ page.anterior }}.html" class="btn-nav">&larr; Anterior</a>
+    {% endif %}
+    <a href="{{ site.baseurl }}/{{ page.lista }}.html" class="btn-nav">Lista de Capítulos</a>
+    {% if page.siguiente %}
+        <a href="{{ site.baseurl }}/{{ page.siguiente }}.html" class="btn-nav">Siguiente &rarr;</a>
+    {% endif %}
+</div>
+
+<div class="ad-container ad-top">
+    <span class="ad-label">Publicidad</span>
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '28ea1e8bfb954e84af148468a2d3c686',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://fundingfashioned.com/28ea1e8bfb954e84af148468a2d3c686/invoke.js"></script>
+</div>

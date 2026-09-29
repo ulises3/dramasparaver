@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="pilar-header">
+    <img src="{{ page.imagen }}" alt="{{ page.title }}">
+    <div class="pilar-info">
+        <h1>{{ page.h1 }}</h1>
+        <p><strong>Sinopsis general:</strong> {{ page.sinopsis }}</p>
+    </div>
+</div>
+
+<div class="capitulos-section">
+    <h2>Lista de Capítulos</h2>
+    
+    {% assign caps = site.capitulos | where: "drama", page.slug | sort: "numero" %}
+    {% for cap in caps %}
+    <div class="capitulo-item">
+        <span><strong>Capítulo {{ cap.numero }}:</strong> {{ cap.titulo_corto }}</span>
+        <a href="{{ site.baseurl }}/{{ cap.slug }}.html">Ver Capítulo</a>
+    </div>
+    {% endfor %}
+</div>
