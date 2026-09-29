@@ -1,4 +1,6 @@
 ---
+layout: default
+---
 layout: drama
 title: "The Heirs - Dramas Para Ver"
 h1: "The Heirs (Herederos)"
