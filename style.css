@@ -9,12 +9,12 @@ body {
 }
 
 .post-text a {
-    color: #66b3ff;
+    color: #00bfff;
     text-decoration: underline;
 }
 
 .post-text a:hover {
-    color: #99ccff;
+    color: #66d9ff;
 }
 
 nav { 
