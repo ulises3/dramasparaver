@@ -8,6 +8,15 @@ body {
     color: #ffffff;
 }
 
+.post-text a {
+    color: #66b3ff;
+    text-decoration: underline;
+}
+
+.post-text a:hover {
+    color: #99ccff;
+}
+
 nav { 
     background-color: #1f1f1f; 
     border-bottom: 2px solid #ff5722; 
