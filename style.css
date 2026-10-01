@@ -8,12 +8,12 @@ body {
     color: #ffffff;
 }
 
-.post-text a {
-    color: #6495ED;
+.enlaces-video a {
+    color: #87ceeb;
     text-decoration: underline;
 }
 
-.post-text a:hover {
+.enlaces-video a:hover {
     color: #b0e0e6;
 }
 
