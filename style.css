@@ -447,3 +447,36 @@ footer {
     object-fit: cover !important; 
     display: block;
 }
+
+/* ==========================================
+   PAGINACIÓN
+   ========================================== */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.pag-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 1px solid #333;
+    transition: all 0.3s;
+}
+
+.pag-btn:hover {
+    background-color: #ff5722;
+    color: #ffffff;
+}
+
+.pag-btn.active {
+    background-color: #ff5722;
+    color: #ffffff;
+}
