@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="https://ulises3.github.io/dramasparaver/dramas-logo-2-modified.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Últimas Entradas - Dramas Para Ver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <a href="index.html" class="logo" style="text-decoration: none;">Dramas Para Ver</a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Inicio</a>
+                <a href="dramas-sinopsis.html">Todos los dramas</a>
+                <a href="articulos.html">Artículos</a>
+                <a href="privacidad.html">Política de privacidad</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            var links = document.getElementById("navLinks");
+            links.classList.toggle("active");
+        }
+    </script>
+
+    <div class="main-container">
+
+        <div class="ad-container ad-top">
+            <span class="ad-label">Publicidad</span>
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '28ea1e8bfb954e84af148468a2d3c686',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="https://fundingfashioned.com/28ea1e8bfb954e84af148468a2d3c686/invoke.js"></script>
+        </div>
+
+        <div class="section-block">
+            <div class="section-header">
+                <h2>Últimas Entradas</h2>
+            </div>
+            <div class="grid-3" id="contenedor-ultimas">
+                <!-- JavaScript inyectará las tarjetas aquí -->
+            </div>
+            <div class="paginacion" id="paginacion">
+                <!-- JavaScript inyectará la paginación aquí -->
+            </div>
+        </div>
+
+        <div class="ad-container ad-top">
+            <span class="ad-label">Publicidad</span>
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '28ea1e8bfb954e84af148468a2d3c686',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="https://fundingfashioned.com/28ea1e8bfb954e84af148468a2d3c686/invoke.js"></script>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 DramasParaVer. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        fetch('dramas.json')
+            .then(response => response.json())
+            .then(data => {
+                const todasLasEntradas = data.ultimas_entradas.slice(6);
+                
+                const entradasPorPagina = 9;
+                const totalPaginas = Math.ceil(todasLasEntradas.length / entradasPorPagina);
+
+                function mostrarPagina(pagina) {
+                    const inicio = (pagina - 1) * entradasPorPagina;
+                    const fin = inicio + entradasPorPagina;
+                    const entradasPagina = todasLasEntradas.slice(inicio, fin);
+
+                    const grid = document.getElementById('contenedor-ultimas');
+                    let html = '';
+                    entradasPagina.forEach(item => {
+                        html += `
+                            <div class="card">
+                                <a href="${item.link}">
+                                    <img src="${item.imagen || item.imagen_drama}" alt="${item.titulo}">
+                                </a>
+                                <div class="card-content">
+                                    <h3>${item.titulo}</h3>
+                                    <p>${item.descripcion}</p>
+                                    <a href="${item.link}" class="card-link">Ver capítulo &rarr;</a>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    grid.innerHTML = html;
+
+                    const paginacion = document.getElementById('paginacion');
+                    let htmlPaginacion = '';
+                    for (let i = 1; i <= totalPaginas; i++) {
+                        htmlPaginacion += `<a href="#" class="pag-btn ${i === pagina ? 'active' : ''}" data-pagina="${i}">${i}</a>`;
+                    }
+                    paginacion.innerHTML = htmlPaginacion;
+
+                    document.querySelectorAll('.pag-btn').forEach(btn => {
+                        btn.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const nuevaPagina = parseInt(e.target.dataset.pagina);
+                            mostrarPagina(nuevaPagina);
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        });
+                    });
+                }
+
+                mostrarPagina(1);
+            })
+            .catch(error => console.error('Error al cargar el JSON:', error));
+    </script>
+
+</body>
+</html>
