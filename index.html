@@ -132,9 +132,9 @@
         <p>&copy; 2026 DramasParaVer. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- SCRIPT INTELIGENTE QUE LEE EL JSON Y ARMA LA PÁGINA (CON IMÁGENES CLICKEABLES) -->
+  <!-- SCRIPT INTELIGENTE QUE LEE EL JSON Y ARMA LA PÁGINA (CON IMÁGENES CLICKEABLES) -->
 <script>
-   ultimas.forEach(item => {
+    fetch('dramas.json')
         .then(response => response.json())
         .then(data => {
             // Rellenar Últimas Entradas (solo las 6 más recientes)
