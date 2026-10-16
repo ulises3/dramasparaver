@@ -480,3 +480,22 @@ footer {
     background-color: #ff5722;
     color: #ffffff;
 }
+
+.nota-progreso {
+    background-color: #fff8e1;
+    border-left: 5px solid #ffc107;
+    padding: 15px 20px;
+    margin: 25px 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #5d4037;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.nota-progreso p {
+    margin: 0;
+}
+
+.nota-progreso strong {
+    color: #e65100;
+}
