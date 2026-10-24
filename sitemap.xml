@@ -95,4 +95,85 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+
+        <!-- Sad Love History - serie principal -->
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/sad-love-history.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/sad-love-history-capitulo-1.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/sad-love-history-capitulo-2.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/sad-love-history-capitulo-3.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/sad-love-history-capitulo-4.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/sad-love-history-capitulo-5.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/sad-love-history-capitulo-6.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/sad-love-history-capitulo-7.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/sad-love-history-capitulo-8.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/sad-love-history-capitulo-9.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/sad-love-history-capitulo-10.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- The Heirs - capítulos nuevos -->
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/the-heirs-capitulo-11.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/the-heirs-capitulo-12.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/the-heirs-capitulo-13.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Página de últimas entradas -->
+    <url>
+        <loc>https://ulises3.github.io/dramasparaver/ultimas-entradas.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
