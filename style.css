@@ -325,6 +325,7 @@ footer {
 }
 
 .post-image img {
+    width: 700px;
     max-width: 100%;
     height: auto;
     border-radius: 6px;
